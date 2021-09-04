@@ -21,7 +21,7 @@ const Staking = (props) => {
   return (
     <div className={classes.Staking}>
       <img src={icon} alt="logo" className={classes.icon} />
-      <h1> Yield Farming / Token Staking dApp</h1>
+      <h1> whyrx staking dapp</h1>
       <p>{props.account}</p>
       <h3>
         {props.apy}% (APY) - {props.apy / 365}% Daily Earnings
@@ -57,7 +57,7 @@ const Staking = (props) => {
       </button>
       <div className={classes.totals}>
         <h4>
-          Total Staked (by all users): {props.totalStaked} TestToken (Tst)
+          Total Staked in smart contract(by all users): {props.totalStaked} TestToken (Tst)
         </h4>
         <div>&nbsp;</div>
         <h5>My Stake: {props.myStake} TestToken (Tst) </h5>
