@@ -8,7 +8,7 @@ import AdminTesting from './components/AdminTesting';
 import Navigation from './components/Navigation';
 
 const App = () => {
-  const [account, setAccount] = useState('Connecting to Metamask..');
+  const [account, setAccount] = useState('Connecting to Tronlink..');
   const [network, setNetwork] = useState({ id: '0', name: 'none' });
   const [testTokenContract, setTestTokenContract] = useState('');
   const [tokenStakingContract, setTokenStakingContract] = useState('');
@@ -23,7 +23,7 @@ const App = () => {
   const [page, setPage] = useState(1);
 
   useEffect(() => {
-    //connecting to ethereum blockchain
+    //connecting to TRX blockchain
     const ethEnabled = async () => {
       fetchDataFromBlockchain();
     };
@@ -37,7 +37,7 @@ const App = () => {
       await window.ethereum.request({ method: 'eth_requestAccounts' });
       window.web3 = new Web3(window.ethereum);
 
-      //connecting to metamask
+      //connecting to tronlink
       let web3 = window.web3;
       const accounts = await web3.eth.getAccounts();
       setAccount(accounts[0]);
